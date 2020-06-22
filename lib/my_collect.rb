@@ -1,11 +1,7 @@
 list =["Tim Jones", "Tom Smith", "Jim Campagno"]
 
-def my_collect(languages)
- i = 0
-lang_caps = []
-while i < languages.length
- lang_caps << yield(languages[i])
- i += 1
+def my_collect(array)
+  my_collect(array) do |name|
+    name.upcase
 end
-lang_caps
 end
